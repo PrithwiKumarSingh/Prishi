@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Prishi — Instant Word Lookup",
+  "version": "1.0.0",
+  "description": "Select any word or phrase while reading docs and get an instant AI-powered definition, in context, without leaving the page.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://generativelanguage.googleapis.com/*"],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.js"],
+      "css": ["dist/styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Prishi — click to set your Gemini API key"
+  }
+}

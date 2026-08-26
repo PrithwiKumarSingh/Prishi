@@ -1,0 +1,20 @@
+{
+  "name": "define-it",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chrome extension: select a word in any doc, get an instant AI definition via the Gemini API.",
+  "scripts": {
+    "build:css": "tailwindcss -i src/styles.css -o dist/styles.css --minify",
+    "build:js": "esbuild src/background.ts src/content.ts src/options.ts --bundle --outdir=dist --target=chrome110 --format=iife",
+    "build": "npm run build:css && npm run build:js",
+    "watch:css": "npm run build:css -- --watch",
+    "watch:js": "npm run build:js -- --watch",
+    "watch": "npm run watch:css & npm run watch:js"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.270",
+    "esbuild": "^0.23.0",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.0"
+  }
+}
