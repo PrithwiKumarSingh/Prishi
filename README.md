@@ -92,12 +92,9 @@ chrome://extensions
 The extension should now appear in Chrome.
 
 ## Setup Gemini API Key
-
-Prishi uses the Gemini API to generate explanations.
-
-1. Click the Prishi extension icon.
-2. Enter your Gemini API key.
-3. Click **Save Key**.
+   - Click the extension icon in the toolbar → it opens the options page
+     (or right-click the icon → **Options**)
+   - Paste your Gemini API key → **Save key**
 
 You can get a Gemini API key from Google AI Studio.
 
